@@ -1,5 +1,4 @@
-/* G E N E R A L
-* * * * * * * */
+/* G E N E R A L */
 
 /* root */
 
@@ -113,8 +112,7 @@ ul {
     list-style: none;
 }
 
-/* D E S K T O P
-* * * * * * * */
+/* D E S K T O P */
 
 @media (min-width: 768px) {
 
