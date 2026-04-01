@@ -19,23 +19,21 @@ function Card({ index, symbolArray }) {
     </li>;
 }
 
-function Symbol({ color, name, /*path, rotate,*/ scale, x, y }) {
-    return <div className="card-symbol" style={{
-        backgroundColor: color,
-        width: `${scale}%`,
-        height: `${scale}%`,
+function Symbol({ path, /*rotate,*/ scale, x, y }) {
+    return <img className="card-symbol"
+        src={`/agua/assets/images/${path}.png`}
+        style={{
+            width: `${scale * 0.87}%`,
+            height: `${scale * 0.87}%`,
 
-        top: `${y}%`,
-        left: `${x}%`,
-        transform: `
-            translate(-50%, -50%)
-            rotate(${Math.random() * 360}deg)
-        `
-    }}>
-        <span>
-            {name}
-        </span>
-    </div>;
+            top: `${y}%`,
+            left: `${x}%`,
+            transform: `
+                translate(-50%, -50%)
+                rotate(${Math.random() * 360}deg)
+            `
+        }}
+    />;
 }
 
 // E X P O R T
