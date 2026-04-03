@@ -1,0 +1,61 @@
+/* G E N E R A L */
+
+/* .file */
+
+.file {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    display: none;
+}
+
+.file .page {
+    background: #fff;
+    width: 210mm;
+    height: 297mm;
+
+    box-sizing: border-box;
+    break-after: page;
+    overflow: hidden;
+    page-break-after: always;
+}
+
+.file .page:last-child {
+    break-after: auto;
+    page-break-after: auto;
+}
+
+.file .page .card {
+    border: 0.3mm solid #ddd;
+}
+
+/* P R I N T */
+
+@media print {
+
+    @page {
+        size: A4;
+        margin: 0mm;
+    }
+
+    /* .file */
+
+    .file {
+        display: block;
+    }
+
+    /* .grid */
+
+    .grid {
+        display: none;
+    }
+
+    /* .menu */
+
+    .menu {
+        display: none;
+    }
+
+}

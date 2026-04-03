@@ -1,0 +1,153 @@
+/* G E N E R A L */
+
+/* .menu */
+
+.menu {
+    background: #fff;
+    height: 100dvh;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu > * {
+    width: 100%;
+}
+
+/* __layout */
+
+.menu__layout {
+    overflow: hidden;
+}
+
+.menu__layout .page {
+    background: #ddd;
+    border-radius: 2px;
+
+    margin: 0 auto;
+}
+
+.menu__layout .page ul li .card {
+    aspect-ratio: 1 / 1;
+    background: #fff;
+    border-radius: 50%;
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+/* __render */
+
+.menu__render {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__render button {
+    background: #ddd;
+    border-radius: 25px;
+    min-width: 50px;
+    height: 50px;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.menu__render button span {
+    position: relative;
+    top: -1px;
+}
+
+.menu__render-scale {
+    align-items: center;
+    display: grid;
+}
+
+.menu__render-print {
+    margin: 0 auto;
+}
+
+.menu__render-print button {
+    padding: 0 20px;
+}
+
+/* D E S K T O P */
+
+@media (min-width: 768px) {
+
+    /* .menu */
+
+    .menu {
+        padding: 50px 30px 60px;
+        width: clamp(320px, 30vw, 480px);
+
+        gap: 40px;
+    }
+
+    /* __header */
+
+    .menu__header h1 {
+        font-size: 32px;
+
+        margin: 0 0 20px;
+    }
+
+    /* __render */
+
+    .menu__render {
+        gap: 30px;
+    }
+
+    .menu__render button {
+        font-size: 20px;
+    }
+
+    .menu__render-scale {
+        grid-template-columns: 1fr 25px auto auto;
+        gap: 15px;
+    }
+
+}
+
+/* M O B I L E */
+
+@media (max-width: 767px) {
+
+    /* .menu */
+
+    .menu {
+        padding: 25px 20px 30px;
+        width: 100%;
+
+        gap: 25px;
+    }
+
+    /* __header */
+
+    .menu__header h1 {
+        font-size: 24px;
+
+        margin: 0 0 15px;
+    }
+
+    /* __render */
+
+    .menu__render {
+        gap: 10px;
+    }
+
+    .menu__render button {
+        font-size: 16px;
+    }
+
+    .menu__render-scale {
+        grid-template-columns: 1fr 20px auto auto;
+        gap: 10px;
+    }
+
+}

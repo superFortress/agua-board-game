@@ -3,11 +3,10 @@
 /* .card */
 
 .card {
-    aspect-ratio: 1;
-    background: #fff;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 
     position: relative;
 }
@@ -15,52 +14,4 @@
 .card-symbol {
     position: absolute;
     z-index: 1;
-}
-
-/* __deck */
-
-ul.card__deck {
-    display: grid;
-}
-
-/* D E S K T O P */
-
-@media (min-width: 768px) {
-
-    /* .card */
-
-    .card {
-        box-shadow: 0 7px 15px 1px rgba(0, 0, 0, 0.15);
-    }
-
-    /* __deck */
-
-    ul.card__deck {
-        padding: 60px;
-
-        gap: 30px;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    }
-
-}
-
-/* M O B I L E */
-
-@media (max-width: 767px) {
-
-    /* .card */
-
-    .card {
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-    }
-
-    /* __deck */
-
-    ul.card__deck {
-        padding: 20px;
-
-        gap: 20px;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
-
 }

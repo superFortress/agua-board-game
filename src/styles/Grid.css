@@ -1,0 +1,24 @@
+/* G E N E R A L */
+
+/* .grid */
+
+.grid {
+    width: 100%;
+    height: 100dvh;
+
+    overflow-y: scroll;
+}
+
+.grid ul {
+    padding: 30px;
+    width: 100%;
+
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.grid ul li .card {
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
